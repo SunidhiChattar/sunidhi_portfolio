@@ -1,0 +1,117 @@
+/* 🎀 Projects Section — Clean, Modern & Personal */
+.projects {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1000px;
+  padding: 0 16px;
+}
+/* 
+.projects h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+}
+
+/* underline accent below heading */
+/* .projects h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  margin: 6px auto 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 4px;
+}
+
+.projects-intro {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 18px auto 40px;
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+/* 💠 Responsive grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 28px;
+}
+
+/* 💎 Glass-card inspired project cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(230, 230, 230, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+  border-color: rgba(246, 168, 193, 0.6);
+}
+
+/* ✨ Project Title */
+.project-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+/* underline that grows across the card */
+.project-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* On hover, the underline extends fully */
+.project-card:hover h3::after {
+  width: 100%;
+}
+
+/* 🩰 Description */
+.project-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+/* 🔗 View Project Link — minimal & elegant */
+.project-card a {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  padding: 6px 14px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}

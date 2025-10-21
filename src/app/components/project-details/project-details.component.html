@@ -1,0 +1,19 @@
+<section class="project-details">
+  <div class="back-container">
+    <a href="#projects" class="back-btn">← Back to Projects</a>
+  </div>
+
+  <div class="project-header">
+    <h1>{{ project?.title }}</h1>
+    <p class="description">{{ project?.description }}</p>
+  </div>
+
+  <div class="project-body">
+    <p>{{ project?.details }}</p>
+
+    <h3>Technologies Used</h3>
+    <ul class="tech-list">
+      <li *ngFor="let tech of project?.tech">{{ tech }}</li>
+    </ul>
+  </div>
+</section>

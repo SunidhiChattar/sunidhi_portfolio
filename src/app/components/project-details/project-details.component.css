@@ -1,0 +1,76 @@
+/* ✅ Make project detail fullscreen */
+.project-details {
+  width: 100%;
+  min-height: 100vh; /* full viewport height */
+  background: #ffffff;
+  color: #0f172a;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* 🡸 Back button styling */
+.back-container {
+  margin-bottom: 24px;
+}
+.back-btn {
+  color: var(--accent-2);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.back-btn:hover {
+  opacity: 0.7;
+}
+
+/* 🏗️ Header */
+.project-header {
+  margin-bottom: 40px;
+}
+.project-header h1 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.project-header .description {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 800px;
+}
+
+/* 🧠 Body */
+.project-body {
+  max-width: 900px;
+  line-height: 1.8;
+}
+.project-body h3 {
+  font-size: 1.2rem;
+  margin-top: 40px;
+  color: var(--text);
+}
+.project-body p {
+  margin-bottom: 16px;
+}
+
+/* ⚙️ Tech list */
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.tech-list li {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 6px 14px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}

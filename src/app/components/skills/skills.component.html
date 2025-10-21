@@ -1,0 +1,27 @@
+<section class="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <p class="skills-intro">
+    I build accessible, responsive, and high-performance interfaces with an eye
+    for design and detail. As a detail-oriented software engineer with 2.8 years
+    of experience, I craft secure, scalable web and Android applications using
+    Angular and Jetpack Compose — with a focus on performance, security, and
+    delightful user experiences.
+  </p>
+
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Languages</h3>
+      <span *ngFor="let skill of skills.languages">{{ skill }}</span>
+    </div>
+
+    <div class="skill-category">
+      <h3>Frameworks & Libraries</h3>
+      <span *ngFor="let skill of skills.frameworks">{{ skill }}</span>
+    </div>
+
+    <div class="skill-category">
+      <h3>Security & Tools</h3>
+      <span *ngFor="let skill of skills.tools">{{ skill }}</span>
+    </div>
+  </div>
+</section>

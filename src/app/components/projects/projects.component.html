@@ -1,0 +1,18 @@
+
+<section id="projects" class="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <p class="projects-intro">
+    I build accessible, responsive, and high-performance interfaces with an eye
+    for design and detail. With a strong background in Angular, Jetpack Compose,
+    and React Native, I’ve worked on secure, scalable applications that deliver
+    both reliability and a delightful user experience.
+  </p>
+
+  <div class="projects-grid">
+    <article *ngFor="let project of projects" class="project-card">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+       <a class="project-link" href="#contact">View Project</a>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <form (ngSubmit)="submit()" class="contact-form">
+    <input [(ngModel)]="name" name="name" placeholder="Your name" required />
+    <input [(ngModel)]="email" name="email" placeholder="Your email" required />
+    <textarea
+      [(ngModel)]="message"
+      name="message"
+      rows="4"
+      placeholder="Message"
+    ></textarea>
+    <div style="display: flex; justify-content: center; margin-top: 12px">
+      <button class="btn" type="submit" (click)="submit()">Send Message</button>
+    </div>
+  </form>
+</section>
