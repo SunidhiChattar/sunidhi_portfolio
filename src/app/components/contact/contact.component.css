@@ -39,7 +39,7 @@ textarea:focus {
 }
 
 /* Send Message button — neat and small */
-.btn {
+.send-btn {
   background: #fff;
   border: 1.8px solid var(--accent);
   color: var(--text);
@@ -50,7 +50,7 @@ textarea:focus {
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.send-btn:hover {
   background: var(--accent);
   color: #fff;
   transform: translateY(-1px);

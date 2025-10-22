@@ -2,19 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  /* 🎨 Color System — balanced and elegant */
-  --bg: #fbfbfd; /* very soft white */
-  --text: #0f172a; /* dark slate for readability */
-  --muted: #6b7280; /* neutral gray for secondary text */
-  --accent: #5b9bff; /* refined blue accent */
-  --accent-2: #f6a8c1; /* subtle pink highlight */
-  --card: #ffffff; /* surface background */
+  --bg: #fbfbfd;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #5b9bff;
+  --accent-2: #f6a8c1;
+  --card: #ffffff;
 
-  /* ✨ Typography */
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-body: "Inter", sans-serif;
 
-  /* ⚙️ Spacing and layout */
   --container-width: 1100px;
   --section-spacing: 36px;
 }
@@ -51,7 +48,6 @@ a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 a:hover {
   color: #3a7bdb;
 }
@@ -97,7 +93,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* 💳 Card / Section Base */
+/* 💳 Card / Section Base — refined and well-defined */
 section {
   margin: var(--section-spacing) auto;
   padding: 0 16px;
@@ -107,27 +103,41 @@ section {
 .card {
   background: var(--card);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 28px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(91, 155, 255, 0.35);
+  box-shadow: 0 10px 28px rgba(91, 155, 255, 0.15);
+  background: #ffffff;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.08);
+/* ✨ Focus or active state */
+.card:focus-within,
+.card:active {
+  outline: none;
+  border-color: rgba(91, 155, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(91, 155, 255, 0.25);
 }
+
+/* Keep alternating background for sections */
 section:nth-of-type(even) {
   background: #f9fafb;
   border-radius: 16px;
   padding: 48px 24px;
 }
+
+/* 🌸 Accent gradient for “Sunidhi” */
 .accent {
   background: linear-gradient(120deg, #f6a8c1 0%, #f19ab3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
-
 
 /* 🌗 Theme Toggle Styles */
 .theme-toggle {
@@ -149,112 +159,166 @@ section:nth-of-type(even) {
   transition: all 0.3s ease;
   z-index: 9999;
 }
-
 .theme-toggle:hover {
   transform: scale(1.1);
 }
 
-
-/* Optional — make cards and sections also adapt */
-body.dark-mode section:nth-of-type(even) {
-  background: #1e293b;
-}
-
-body.dark-mode .card {
-  background: #1e293b;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
-}
-
-
-/* Light gray text */
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4 {
-  color: #f1f5f9; /* Bright white for headings */
-}
-
-body.dark-mode p,
-body.dark-mode a,
-body.dark-mode span,
-body.dark-mode li {
-  color: #cbd5e1; /* Softer gray for body text */
-}
-
-body.dark-mode a:hover {
-  color: var(--accent);
-}
-
-body.dark-mode .card {
-  background: #1e293b;
-  color: #e2e8f0;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.04);
-}
-
-body.dark-mode section:nth-of-type(even) {
-  background: #243047;
-  color: #e2e8f0;
-}
-
-
-/* slightly brighter neutral text */
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4 {
-  color: #ffffff; /* pure white for strong headings */
-}
-
-body.dark-mode p,
-body.dark-mode a,
-body.dark-mode span,
-body.dark-mode li {
-  color: #d1d5db; /* brighter paragraph text */
-}
-
-body.dark-mode a:hover {
-  color: var(--accent);
-}
-
-/* Cards */
-body.dark-mode .card {
-  background: #2c3a52; /* darker blue-gray background for better contrast */
-  color: #e8edf5;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Lighter section backgrounds */
-body.dark-mode section:nth-of-type(even) {
-  background: #323f59;
-  color: #e8edf5;
-}
-
-/* Optional — subtle text shadows for clarity */
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode p {
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-}
-
-
-/* 🌙 Dynamic Dark Mode Variables */
+/* 🌙 Refined Dark Mode Theme — clean, high contrast */
 body.dark-mode,
 :root.dark-mode {
-  --bg: #0f172a;
-  --card: #1e293b;
-  --text: #e8edf5;
-  --muted: #cbd5e1;
+  --bg: #0d1117;
+  --card: #1c2333;
+  --text: #e6ecf5;
+  --muted: #9ca3af;
   --accent: #5b9bff;
   --accent-2: #f6a8c1;
 }
 
-/* ✨ Smooth theme transition */
-body, h1, h2, h3, h4, p, span, a, section, .card {
-  transition: background-color 0.4s ease, color 0.4s ease;
+/* Base backgrounds */
+body.dark-mode {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* 💳 Cards — dark mode (clean, contrast, modern look) */
+body.dark-mode .card {
+  background: #1c2333;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e6ecf5;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode .card.current-focus p {
+  color: #a2aec2; /* a little darker and balanced for focus card only */
+}
+
+
+body.dark-mode .card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(91, 155, 255, 0.45);
+  background: #252f42;
+  box-shadow: 0 10px 30px rgba(91, 155, 255, 0.15);
+}
+/* 🌙 Dark mode styling only for project section cards */
+body.dark-mode .project-card {
+  background: #202738; /* darker tone for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e6ecf5;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .project-card:hover {
+  background: #262f44; /* hover state with subtle lift */
+  border-color: rgba(91, 155, 255, 0.25);
+  box-shadow: 0 8px 22px rgba(91, 155, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+body.dark-mode .project-card h3 {
+  color: #f1f5fa; /* brighter heading */
+}
+
+body.dark-mode .project-card p {
+  color: #aab5c7; /* soft readable text */
+}
+
+body.dark-mode .project-card .project-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.dark-mode .project-card .project-link:hover {
+  color: #8ab6ff;
+  text-shadow: 0 0 6px rgba(91, 155, 255, 0.4);
+}
+/* 🌓 Make sure dark mode doesn't override it */
+body.dark-mode .send-btn {
+  background: var(--text) !important;
+  color: var(--card) !important;
+  border: none !important;
+  box-shadow: 0 4px 10px rgba(91, 155, 255, 0.25);
+}
+
+body.dark-mode .send-btn:hover {
+  box-shadow: 0 6px 16px rgba(91, 155, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* 🧠 Typography */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+body.dark-mode #skills h3,
+body.dark-mode .skills h3,
+body.dark-mode #skills h4,
+body.dark-mode .skills h4 {
+  color: var(--text) !important;
+}
+
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode span,
+body.dark-mode li {
+  color: #cfd8e3;
+}
+body.dark-mode .skills-intro {
+  color: #cfd8e3 !important; /* matches Projects section text */
+}
+
+/* 🌸 FIX 1 — Keep Sunidhi gradient same as light mode */
+body.dark-mode .accent {
+  background: linear-gradient(120deg, #f6a8c1 0%, #f19ab3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* 🌸 FIX 2 — Keep Download Resume gradient same as light mode */
+body.dark-mode .btn {
+  background: linear-gradient(90deg, #5b9bff 0%, #f6a8c1 100%) !important;
+  color: #fff !important;
+  border: none;
+}
+body.dark-mode .btn:hover {
+  background: linear-gradient(90deg, #3a7bdb 0%, #f19ab3 100%) !important;
+}
+
+/* Outline buttons stay blue */
+body.dark-mode .btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+body.dark-mode .btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 🌗 Theme Toggle */
+body.dark-mode .theme-toggle {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ✨ Smooth transitions */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+a,
+section,
+.card {
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
 }
