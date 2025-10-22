@@ -25,7 +25,7 @@
 }
 .tagline {
   font-weight: 600;
-  color: #374151;
+  color: var(--text);
   margin: 6px 0;
 }
 .lead {
@@ -55,7 +55,7 @@
   border-radius: 10px;
   text-decoration: none;
   border: 1px solid rgba(15, 23, 42, 0.06);
-  color: #0f172a;
+  color: var(--text);
 }
 .btn-outline:hover {
   transform: translateY(-1px);
@@ -71,3 +71,12 @@
     height: 120px;
   }
 }
+  .name {
+    font-size: 28px;
+  }
+  .lead {
+    max-width: 100%;
+  }
+  .header-actions {
+    justify-content: center;
+  }
