@@ -1,16 +1,39 @@
 <section class="contact" data-aos="fade-up">
   <h2>Contact</h2>
-  <form (ngSubmit)="submit()" class="contact-form">
-    <input [(ngModel)]="name" name="name" placeholder="Your name" required />
-    <input [(ngModel)]="email" name="email" placeholder="Your email" required />
+
+  <form #contactForm="ngForm" (ngSubmit)="submit()" class="contact-form">
+    <input
+      [(ngModel)]="name"
+      name="name"
+      placeholder="Your name"
+      required
+      #nameInput="ngModel"
+    />
+    <input
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Your email"
+      required
+      email
+      #emailInput="ngModel"
+    />
     <textarea
       [(ngModel)]="message"
       name="message"
       rows="4"
       placeholder="Message"
+      required
+      #messageInput="ngModel"
     ></textarea>
+
     <div style="display: flex; justify-content: center; margin-top: 12px">
-      <button class="send-btn" type="submit" (click)="submit()">Send Message</button>
+      <button
+        class="send-btn"
+        type="submit"
+        [disabled]="contactForm.invalid"
+      >
+        Send Message
+      </button>
     </div>
   </form>
 </section>

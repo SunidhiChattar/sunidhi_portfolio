@@ -155,7 +155,7 @@ section:nth-of-type(even) {
   outline: none;
   background: radial-gradient(circle at 30% 30%, #ffffff, #e8e8e8);
   box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2),
-              -6px -6px 16px rgba(255, 255, 255, 0.8);
+    -6px -6px 16px rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   z-index: 9999;
 }
@@ -163,7 +163,7 @@ section:nth-of-type(even) {
 .theme-toggle:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3),
-              -3px -3px 12px rgba(255, 255, 255, 0.7);
+    -3px -3px 12px rgba(255, 255, 255, 0.7);
 }
 
 .theme-toggle svg {
@@ -181,12 +181,12 @@ section:nth-of-type(even) {
 body.dark-mode .theme-toggle {
   background: radial-gradient(circle at 30% 30%, #181818, #0f0f0f);
   box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.8),
-              -6px -6px 16px rgba(255, 255, 255, 0.05);
+    -6px -6px 16px rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode .theme-toggle:hover {
   box-shadow: 3px 3px 12px rgba(255, 255, 255, 0.05),
-              -3px -3px 12px rgba(0, 0, 0, 0.9);
+    -3px -3px 12px rgba(0, 0, 0, 0.9);
 }
 
 body.dark-mode .theme-toggle svg {
@@ -244,7 +244,6 @@ body.dark-mode .card.current-focus p {
   color: #a2aec2; /* a little darker and balanced for focus card only */
 }
 
-
 body.dark-mode .card:hover {
   transform: translateY(-6px);
   border-color: rgba(91, 155, 255, 0.45);
@@ -292,15 +291,23 @@ body.dark-mode .project-card .project-link:hover {
 body.dark-mode .send-btn {
   background: var(--text) !important;
   color: var(--card) !important;
-  border: none !important;
+  border: 1.8px solid var(--accent) !important;
   box-shadow: 0 4px 10px rgba(91, 155, 255, 0.25);
 }
 
 body.dark-mode .send-btn:hover {
-  /* box-shadow: 0 6px 16px rgba(91, 155, 255, 0.35); */
-  transform: translateY(-2px);
+  background: var(--accent) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
 }
 
+body.dark-mode .send-btn:disabled {
+  background: #ccc !important;
+  color: var(--card) !important;
+  cursor: not-allowed;
+  transform: none;
+  border: 1px solid #666 !important;
+}
 /* 🧠 Typography */
 body.dark-mode h1,
 body.dark-mode h2,
@@ -373,5 +380,5 @@ span,
 a,
 section,
 .card {
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }

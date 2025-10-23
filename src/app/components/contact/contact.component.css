@@ -55,3 +55,16 @@ textarea:focus {
   color: #fff;
   transform: translateY(-1px);
 }
+/* Disabled state */
+.send-btn:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  border: 1px solid #666;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
