@@ -6,6 +6,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import Aos from 'aos';
+import { RouterOutlet } from '@angular/router'; // ✅ added router support
 
 @Component({
   selector: 'app-root',
@@ -16,14 +17,16 @@ import Aos from 'aos';
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    RouterOutlet // ✅ added here
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   currentYear = new Date().getFullYear();
-     ngOnInit() {
+
+  ngOnInit() {
     Aos.init({
       duration: 800, // animation speed in ms
       once: true, // only animate once
