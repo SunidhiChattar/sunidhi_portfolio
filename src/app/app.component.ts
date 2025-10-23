@@ -1,23 +1,13 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
-import { AboutComponent } from './components/about/about.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './components/contact/contact.component';
-import Aos from 'aos';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router'; // ✅ added router support
+import Aos from 'aos';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
-    AboutComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ContactComponent,
     RouterOutlet // ✅ added here
   ],
   templateUrl: './app.component.html',

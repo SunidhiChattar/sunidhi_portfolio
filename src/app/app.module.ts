@@ -16,12 +16,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    AboutComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +23,6 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     AppRoutingModule // 👈 enable router support
   ],
-  bootstrap: [AppComponent] // 👈 main entry point
+  bootstrap: [] // 👈 main entry point
 })
 export class AppModule {}

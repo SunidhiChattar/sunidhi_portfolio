@@ -4,9 +4,11 @@ import { importProvidersFrom } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
-  providers: [importProvidersFrom(CommonModule, FormsModule, BrowserAnimationsModule)],
+  providers: [provideRouter(routes),importProvidersFrom(CommonModule, FormsModule, BrowserAnimationsModule)],
 }).catch((err) => console.error(err));
 // 🌗 Dark/Light Mode Toggle
 const themeToggle = document.getElementById('theme-toggle') as HTMLElement | null;
