@@ -1,76 +1,175 @@
-/* ✅ Make project detail fullscreen */
-.project-details {
+/* === Force clean layout for details page === */
+:host {
+  display: block;
   width: 100%;
-  min-height: 100vh; /* full viewport height */
-  background: #ffffff;
-  color: #0f172a;
-  padding: 60px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
+  height: auto;
+  min-height: 100vh; /* fills screen height */
+  margin: 0;
+  padding: 0;
 }
 
-/* 🡸 Back button styling */
-.back-container {
-  margin-bottom: 24px;
+/* Reset any inherited body/container spacing */
+body, .container {
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
+/* === Project Details Section === */
+.project-details {
+  width: 100%;
+  flex: 1;
+  background: var(--bg, #f8fafc);
+  color: var(--text, #0f172a);
+  padding: 2rem 1.5rem; /* reduced vertical spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Prevent scroll bleed */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* === Fade animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Back Button === */
+.back-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 1.5rem 0; /* tight spacing */
+}
+
 .back-btn {
-  color: var(--accent-2);
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-2, #3b82f6);
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-.back-btn:hover {
-  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* 🏗️ Header */
+.back-btn::before {
+  content: "←";
+  font-size: 1.2rem;
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover::before {
+  transform: translateX(-4px);
+}
+
+/* === Header === */
 .project-header {
-  margin-bottom: 40px;
-}
-.project-header h1 {
-  font-family: var(--font-heading);
-  font-size: 2.4rem;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-.project-header .description {
-  font-size: 1.1rem;
-  color: var(--muted);
-  max-width: 800px;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
-/* 🧠 Body */
+.project-header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.project-header .description {
+  font-size: 1.05rem;
+  color: var(--muted, #64748b);
+}
+
+/* === Body === */
 .project-body {
   max-width: 900px;
-  line-height: 1.8;
-}
-.project-body h3 {
-  font-size: 1.2rem;
-  margin-top: 40px;
-  color: var(--text);
-}
-.project-body p {
-  margin-bottom: 16px;
+  text-align: left;
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
-/* ⚙️ Tech list */
+/* === Dot List === */
+.dot-list {
+  list-style: none;
+  margin: 1rem 0 2rem;
+  padding: 0;
+}
+
+.dot-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.dot-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: var(--accent, #3b82f6);
+  font-size: 1.2rem;
+}
+
+/* === Tech List === */
 .tech-list {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 12px;
+  margin-top: 0.75rem;
+}
+
+.tech-list li {
+  background: var(--card-bg, #e2e8f0); /* neutral soft gray */
+  color: var(--text, #0f172a);
+  padding: 8px 18px;
+  border-radius: 10px; /* same rounded style as Languages */
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.tech-list li:hover {
+  background: #cbd5e1; /* slightly darker hover */
+  transform: translateY(-2px);
 }
 .tech-list li {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: white;
-  padding: 6px 14px;
-  border-radius: 24px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+body.dark-mode .tech-list li {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .project-details {
+    padding: 1.5rem 1rem;
+  }
+
+  .project-header h1 {
+    font-size: 1.7rem;
+  }
 }

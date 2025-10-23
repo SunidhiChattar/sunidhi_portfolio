@@ -1,6 +1,6 @@
 <section class="project-details">
   <div class="back-container">
-    <a href="#projects" class="back-btn">← Back to Projects</a>
+    <a (click)="goBackToProjects()" class="back-btn">Back to Projects</a>
   </div>
 
   <div class="project-header">
@@ -10,7 +10,14 @@
 
   <div class="project-body">
     <p>{{ project?.details }}</p>
-
+    <ul class="dot-list">
+      <li>
+        {{project?.l1}}
+      </li>
+      <li>{{project?.l2}}</li>
+      <li>{{project?.l3}}</li>
+      <li>{{project?.l4}}</li>
+    </ul>
     <h3>Technologies Used</h3>
     <ul class="tech-list">
       <li *ngFor="let tech of project?.tech">{{ tech }}</li>

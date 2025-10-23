@@ -38,14 +38,13 @@ function setMoonIcon() {
 }
 
 function applyTheme(isDark: boolean) {
+  document.documentElement.classList.toggle('dark-mode', isDark);
   document.body.classList.toggle('dark-mode', isDark);
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  if (isDark) {
-    setSunIcon();
-  } else {
-    setMoonIcon();
-  }
+  if (isDark) setSunIcon();
+  else setMoonIcon();
 }
+
 
 // 🌘 On Load — Apply Saved Theme
 const savedTheme = localStorage.getItem('theme');
