@@ -15,6 +15,7 @@ export class SkillsComponent {
     tools: [
       'AES/RSA Encryption',
       'CSP Policy Implementation',
+      'ProGuard Rules',
       'Git',
       'JIRA',
       'Android Studio',

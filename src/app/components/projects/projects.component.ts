@@ -13,30 +13,30 @@ export class ProjectsComponent {
   projects = [
     {
       id: 'kotak',
-      title: 'Kotak CBC Web App',
+      title: 'Kotak CBC Portal',
       description:
-        'Developed secure and scalable banking modules in Angular for Kotak Mahindra Bank with features like breadcrumb navigation, HTTP interceptors, and D3.js analytics.',
+        'Developed and maintained Kotak CBC Portal with responsive UI, custom SVGs, breadcrumb navigation, and interactive D3.js data visualizations, ensuring seamless and secure user experiences.',
       tech: ['Angular', 'RxJS', 'REST APIs']
     },
     {
       id: 'nsdl',
       title: 'NSDL CBC Platform',
       description:
-        'Built responsive UI modules and implemented CSP-compliant SVG rendering for enhanced frontend security and performance.',
+        'Built and optimized NSDL CBC Platform’s web interface, enabling seamless multi-level navigation, enhanced user engagement, and secure, high-performance interactions.',
       tech: ['Angular', 'RxJS', 'REST APIs']
     },
     {
       id: 'bob',
       title: 'Bank of Baroda Mobile App',
       description:
-        'Built a cross-platform React Native application for Bank of Baroda. Implemented API data fetching, rendering dynamic dashboards, and secure data handling for a seamless mobile banking experience.',
+        'Developed the Bank of Baroda cross-platform React Native application, replicating the existing Android product with end-to-end API integration, dynamic dashboard rendering, secure data handling, session management, and management of debug and release APK configurations.',
       tech: ['React Native', 'APIs', 'TypeScript']
     },
     {
        id: 'android',
-      title: 'FINO Bank Android App',
+      title: 'FINO Bank Prepaid Card System',
       description:
-        'Developed with Jetpack Compose and Kotlin, focusing on biometric authentication, encryption, and modern UI components for AEPS and prepaid modules.',
+        'Developed using Kotlin and Jetpack Compose, implementing biometric authentication, encryption, and modular, lifecycle-aware UI components for secure and efficient user experiences.',
       tech: ['Angular', 'RxJS', 'REST APIs']
     },
   ];

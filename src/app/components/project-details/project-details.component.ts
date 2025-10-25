@@ -16,52 +16,50 @@ export class ProjectDetailsComponent implements OnInit {
     {
       id: 'kotak',
       title: 'Kotak Mahindra Bank',
-      description: 'A secure, scalable banking application built with Angular and RxJS...',
-      details: `Worked on the frontend architecture and implemented a range of high-impact features to improve performance, maintainability, and data integrity:`,
-      l1: 'Developed real-time dashboards for transaction tracking and analytics.',
-      l2: 'Implemented HTTP interceptors for secure API communication.',
-      l3: 'Built breadcrumb navigation for intuitive user flow.',
-      l4: 'Integrated Content Security Policy (CSP) and encryption.',
-      tech: ['Angular', 'RxJS', 'HTML', 'SCSS', 'CSP', 'TypeScript']
+      description: 'A secure, scalable banking application built with Angular and RxJS, delivering high-performance, responsive, and secure user experiences.',
+      details: `Contributed to the frontend architecture and implemented a range of high-impact features to enhance usability, maintainability, and data security:`,
+      l1: 'Developed interactive, real-time dashboards using D3.js for transaction tracking, analytics, and insights.',
+      l2: 'Implemented HTTP interceptors and encryption mechanisms for secure API communication and data integrity.',
+      l3: 'Built breadcrumb navigation and responsive UI components to improve user flow and accessibility.',
+      l4: 'Integrated Content Security Policy (CSP) and other security best practices to ensure a secure and compliant application.',
+      tech: ['Angular', 'RxJS', 'TypeScript', 'HTML', 'SCSS', 'D3.js', 'CSP']
+
     },
     {
       id: 'nsdl',
       title: 'NSDL Bank Platform',
-      description:
-        'Frontend modernization and performance optimization for NSDL Bank’s digital services platform.',
-      details:
-        'Contributed to UI re-engineering, accessibility, and secure integrations for a scalable banking web platform:',
-      l1: 'Redesigned legacy UI components into reusable Angular modules with consistent design patterns.',
-      l2: 'Enhanced accessibility compliance (WCAG) across all major interactive modules.',
-      l3: 'Optimized rendering performance and API handling for faster data visualization.',
-      l4: 'Implemented CSP-compliant SVG handling and improved frontend security posture.',
-      tech: ['Angular', 'RxJS', 'REST APIs', 'Accessibility', 'CSP']
+      description: 'Modernized and optimized the NSDL CBC Platform’s frontend to deliver a secure, high-performance, and accessible web experience.',
+      details: 'Contributed to UI re-engineering, accessibility improvements, and secure integrations for a scalable and user-friendly banking web platform:',
+      l1: 'Redesigned legacy UI components into reusable Angular modules, enforcing consistent design patterns and maintainability.',
+      l2: 'Enhanced accessibility compliance (WCAG) across all major interactive modules to ensure an inclusive user experience.',
+      l3: 'Optimized rendering performance and API interactions, enabling faster data visualization and real-time insights.',
+      l4: 'Implemented CSP-compliant SVG handling and strengthened frontend security measures to safeguard sensitive banking data.',
+      tech: ['Angular', 'RxJS', 'REST APIs', 'Accessibility', 'CSP', 'TypeScript', 'HTML', 'SCSS']
+
     },
     {
       id: 'bob',
       title: 'Bank of Baroda Mobile App',
-      description:
-        'A cross-platform mobile banking application built with React Native for Bank of Baroda.',
-      details:
-        'Designed and developed mobile modules ensuring high performance, usability, and secure API communication:',
-      l1: 'Integrated RESTful APIs for fetching and rendering real-time financial data and dashboards.',
-      l2: 'Built dynamic UI components for account insights, notifications, and transaction history.',
-      l3: 'Implemented secure storage and encrypted communication for sensitive banking data.',
-      l4: 'Optimized app startup time and state management for better user experience.',
-      tech: ['React Native', 'TypeScript', 'APIs', 'Redux', 'Secure Storage']
+      description: 'A cross-platform React Native mobile banking application delivering secure, high-performance, and feature-rich user experiences.',
+      details: 'Designed and developed mobile modules with a focus on performance, usability, and secure API integration:',
+      l1: 'Integrated RESTful APIs for real-time financial data, transaction history, and dynamic dashboard rendering.',
+      l2: 'Built reusable and dynamic UI components for account insights, notifications, and user interactions.',
+      l3: 'Implemented secure storage, encrypted communication, and session management to protect sensitive banking data.',
+      l4: 'Optimized app startup time, state management, and handled debug/release APK configurations for a seamless deployment process.',
+      tech: ['React Native', 'TypeScript', 'Redux', 'REST APIs', 'Secure Storage', 'APIs', 'Mobile Performance']
+
     },
     {
       id: 'android',
       title: 'FINO Bank Android App',
-      description:
-        'A modern Android banking application developed with Jetpack Compose and Kotlin for FINO Payments Bank.',
-      details:
-        'Engineered core Android modules emphasizing biometric authentication, encryption, and clean UI architecture:',
-      l1: 'Implemented biometric authentication and secure encryption for AEPS and prepaid services.',
-      l2: 'Developed modern, composable UI elements using Jetpack Compose for enhanced maintainability.',
-      l3: 'Integrated API layers for seamless data synchronization with banking services.',
-      l4: 'Improved performance and app responsiveness through Kotlin Coroutines and Flow.',
-      tech: ['Kotlin', 'Jetpack Compose', 'Coroutines', 'Encryption', 'Android']
+      description: 'A modern Android banking application built with Kotlin and Jetpack Compose, delivering secure, efficient, and modular user experiences.',
+      details: 'Engineered core Android modules focusing on biometric authentication, encryption, and maintainable UI architecture:',
+      l1: 'Implemented biometric authentication and secure encryption for AEPS and prepaid banking services.',
+      l2: 'Developed modular, composable UI components using Jetpack Compose for improved maintainability and lifecycle awareness.',
+      l3: 'Integrated robust API layers for seamless synchronization with backend banking services.',
+      l4: 'Enhanced app performance and responsiveness through Kotlin Coroutines and Flow for asynchronous operations.',
+      tech: ['Kotlin', 'Jetpack Compose', 'Coroutines', 'Encryption', 'Android', 'AEPS', 'Mobile Security']
+
     },
   ];
 
@@ -70,7 +68,7 @@ export class ProjectDetailsComponent implements OnInit {
   ngOnInit() {
     this.projectId = this.route.snapshot.paramMap.get('id');
     this.project = this.projects.find(p => p.id === this.projectId);
-    
+
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
