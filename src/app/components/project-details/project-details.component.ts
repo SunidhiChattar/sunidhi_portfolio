@@ -22,7 +22,8 @@ export class ProjectDetailsComponent implements OnInit {
       l2: 'Implemented HTTP interceptors and encryption mechanisms for secure API communication and data integrity.',
       l3: 'Built breadcrumb navigation and responsive UI components to improve user flow and accessibility.',
       l4: 'Integrated Content Security Policy (CSP) and other security best practices to ensure a secure and compliant application.',
-      tech: ['Angular', 'RxJS', 'TypeScript', 'HTML', 'SCSS', 'D3.js', 'CSP']
+      tech: ['Angular', 'RxJS', 'TypeScript', 'HTML', 'SCSS', 'D3.js', 'CSP'],
+      demoVideoUrl1: 'assets/videos/demo.mp4',
 
     },
     {
@@ -34,7 +35,8 @@ export class ProjectDetailsComponent implements OnInit {
       l2: 'Enhanced accessibility compliance (WCAG) across all major interactive modules to ensure an inclusive user experience.',
       l3: 'Optimized rendering performance and API interactions, enabling faster data visualization and real-time insights.',
       l4: 'Implemented CSP-compliant SVG handling and strengthened frontend security measures to safeguard sensitive banking data.',
-      tech: ['Angular', 'RxJS', 'REST APIs', 'Accessibility', 'CSP', 'TypeScript', 'HTML', 'SCSS']
+      tech: ['Angular', 'RxJS', 'REST APIs', 'Accessibility', 'CSP', 'TypeScript', 'HTML', 'SCSS'],
+      demoVideoUrl1: 'assets/videos/demo.mp4',
 
     },
     {
@@ -46,7 +48,8 @@ export class ProjectDetailsComponent implements OnInit {
       l2: 'Built reusable and dynamic UI components for account insights, notifications, and user interactions.',
       l3: 'Implemented secure storage, encrypted communication, and session management to protect sensitive banking data.',
       l4: 'Optimized app startup time, state management, and handled debug/release APK configurations for a seamless deployment process.',
-      tech: ['React Native', 'TypeScript', 'Redux', 'REST APIs', 'Secure Storage', 'APIs', 'Mobile Performance']
+      tech: ['React Native', 'TypeScript', 'Redux', 'REST APIs', 'Secure Storage', 'APIs', 'Mobile Performance'],
+      demoVideoUrl1: 'assets/videos/bankOfBaroda.mp4',
 
     },
     {
@@ -58,7 +61,9 @@ export class ProjectDetailsComponent implements OnInit {
       l2: 'Developed modular, composable UI components using Jetpack Compose for improved maintainability and lifecycle awareness.',
       l3: 'Integrated robust API layers for seamless synchronization with backend banking services.',
       l4: 'Enhanced app performance and responsiveness through Kotlin Coroutines and Flow for asynchronous operations.',
-      tech: ['Kotlin', 'Jetpack Compose', 'Coroutines', 'Encryption', 'Android', 'AEPS', 'Mobile Security']
+      tech: ['Kotlin', 'Jetpack Compose', 'Coroutines', 'Encryption', 'Android', 'AEPS', 'Mobile Security'],
+      demoVideoUrl1: 'assets/videos/prepaidCardSystemBlueTheme.mp4',
+      demoVideoUrl2: 'assets/videos/prepaidCardSystemGreenTheme.mp4',
 
     },
   ];

@@ -162,6 +162,23 @@ body.dark-mode .tech-list li {
   background: var(--card-bg);
   color: var(--text);
 }
+.demo-video {
+  margin-top: 2rem;
+}
+
+.video-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.video-container video {
+  width: auto;
+  height: 480px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* === Responsive === */
 @media (max-width: 768px) {
