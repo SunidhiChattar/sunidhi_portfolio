@@ -13,8 +13,16 @@ export class ContactComponent {
   name = '';
   email = '';
   message = '';
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient) {
+    Notiflix.Loading.init({
+      // svgColor: '#b30e0eff',          // spinner color
+      messageColor: '#ffffff'       // text color
+    });
+  }
+
   submit() {
+    Notiflix.Loading.circle('Sending mail...');
     const payload = {
       "name": this.name,
       "email": this.email,
@@ -37,10 +45,12 @@ export class ContactComponent {
     this.http.post('http://172.16.6.242:8080/portfolio/send-email', payload).subscribe(
       (response: any) => {
         if (response.status === 'SUCCESS') {
+          Notiflix.Loading.remove();
           Notiflix.Notify.success(response.statusDescription ?? 'Email sent successfully!');
         }
       },
       (error: any) => {
+        Notiflix.Loading.remove();
         Notiflix.Notify.failure(error.statusDescription ?? 'Failed to send email. Please try again later.');
       }
     )

@@ -302,7 +302,7 @@ body.dark-mode .send-btn:hover {
 }
 
 body.dark-mode .send-btn:disabled {
-  background: #ccc !important;
+  background: #8b8585 !important;
   color: var(--card) !important;
   cursor: not-allowed;
   transform: none;
