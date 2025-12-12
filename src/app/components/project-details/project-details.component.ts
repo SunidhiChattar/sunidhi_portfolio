@@ -22,8 +22,7 @@ export class ProjectDetailsComponent implements OnInit {
       l2: 'Implemented HTTP interceptors and encryption mechanisms for secure API communication and data integrity.',
       l3: 'Built breadcrumb navigation and responsive UI components to improve user flow and accessibility.',
       l4: 'Integrated Content Security Policy (CSP) and other security best practices to ensure a secure and compliant application.',
-      tech: ['Angular', 'RxJS', 'TypeScript', 'HTML', 'SCSS', 'D3.js', 'CSP'],
-      // demoVideoUrl1: 'assets/videos/kotak.mp4',
+      tech: ['Angular', 'RxJS', 'TypeScript', 'HTML', 'SCSS', 'D3.js', 'CSP']
 
     },
     {
@@ -35,8 +34,7 @@ export class ProjectDetailsComponent implements OnInit {
       l2: 'Enhanced accessibility compliance (WCAG) across all major interactive modules to ensure an inclusive user experience.',
       l3: 'Optimized rendering performance and API interactions, enabling faster data visualization and real-time insights.',
       l4: 'Implemented CSP-compliant SVG handling and strengthened frontend security measures to safeguard sensitive banking data.',
-      tech: ['Angular', 'RxJS', 'REST APIs', 'Accessibility', 'CSP', 'TypeScript', 'HTML', 'SCSS'],
-      // demoVideoUrl1: 'assets/videos/nsdl.mp4',
+      tech: ['Angular', 'RxJS', 'REST APIs', 'Accessibility', 'CSP', 'TypeScript', 'HTML', 'SCSS']
 
     },
     {
