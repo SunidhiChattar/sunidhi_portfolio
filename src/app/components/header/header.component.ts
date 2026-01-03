@@ -21,9 +21,7 @@ export class HeaderComponent {
       return;
     }
 
-    // navigate to home, then scroll after navigation completes
     this.router.navigate(['/']).then(() => {
-      // small timeout to ensure DOM is rendered; 0-100ms is usually fine
       setTimeout(() => this.scrollNow(section), 50);
     });
   }
