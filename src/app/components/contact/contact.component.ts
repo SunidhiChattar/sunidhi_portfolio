@@ -16,8 +16,7 @@ export class ContactComponent {
 
   constructor(private http: HttpClient) {
     Notiflix.Loading.init({
-      // svgColor: '#b30e0eff',          // spinner color
-      messageColor: '#ffffff'       // text color
+      messageColor: '#ffffff'   
     });
   }
 
