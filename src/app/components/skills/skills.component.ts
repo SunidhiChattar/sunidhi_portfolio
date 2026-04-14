@@ -19,7 +19,8 @@ export class SkillsComponent {
       'Git',
       'JIRA',
       'Android Studio',
-      'VS Code'
+      'VS Code',
+      'Antigravity'
     ]
   };
 }
