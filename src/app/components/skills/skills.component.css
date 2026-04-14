@@ -27,16 +27,27 @@
 .skill-category span {
   display: inline-block;
   background: #f4f4f4;
-  border-radius: 8px;
-  padding: 6px 12px;
-  margin: 4px;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin: 6px;
   font-size: 0.95rem;
   color: #333;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .skill-category span:hover {
   background: #eaeaea;
+}
+
+/* 🌙 Dark Mode Chips — Global (High Specificity) */
+:host-context(.dark-mode) .skill-category span,
+body.dark-mode .skill-category span {
+  background: #1c2333 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
 }
 
 @media (max-width: 768px) {
@@ -60,17 +71,5 @@
   }
   .skill-category span {
     font-size: 0.88rem;
-    padding: 8px 16px;
-    margin: 6px;
-    background: var(--card);
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    border-radius: 12px;
-    color: var(--text); /* Ensure text color is set */
-  }
-  body.dark-mode .skill-category span {
-    border: 1px solid rgba(255,255,255,0.15);
-    background: rgba(255,255,255,0.05);
-    color: #ffffff; /* Explicitly bright text */
   }
 }

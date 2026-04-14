@@ -10,17 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class SkillsComponent {
   skills = {
-    languages: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Kotlin'],
-    frameworks: ['Angular', 'D3.js', 'Jetpack Compose', 'React Native'],
-    tools: [
-      'AES/RSA Encryption',
-      'CSP Policy Implementation',
-      'ProGuard Rules',
-      'Git',
-      'JIRA',
-      'Android Studio',
-      'VS Code',
-      'Antigravity'
-    ]
+    languages: ['TypeScript', 'Kotlin', 'JavaScript (ES6+)', 'HTML5', 'CSS3'],
+    frameworks: ['Angular', 'RxJS', 'D3.js', 'Jetpack Compose', 'Navigation Component'],
+    architecture: ['MVVM', 'Feature Modularisation', 'White-label Builds', 'Reusable Module Design', 'CoroutineScope'],
+    security: ['AES-CBC / RSA Encryption', 'CSP Compliance', 'Biometric Auth', 'ProGuard'],
+    tools: ['Git', 'JIRA', 'Android Studio', 'VS Code', 'Profiler', 'Logcat']
   };
 }
