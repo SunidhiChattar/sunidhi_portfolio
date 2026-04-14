@@ -39,8 +39,31 @@
 }
 
 @media (max-width: 760px) {
+  .about {
+    padding: 16px;
+  }
   .about-inner {
     flex-direction: column;
+    gap: 24px;
+  }
+  .card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  .about-left h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .about-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .about-right {
+    padding: 24px 20px;
+    margin-top: 10px;
+    border: 1px solid rgba(91, 155, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(91, 155, 255, 0.05);
   }
 }
 

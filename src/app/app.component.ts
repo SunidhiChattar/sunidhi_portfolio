@@ -43,4 +43,23 @@ export class AppComponent {
       return;
     }
   }
+
+  /** 
+   * 📜 Smooth scroll to specific element by ID
+   */
+  scrollTo(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // If not on home page, navigate home first then scroll?
+      // Since it's a SPA with sections usually on home page:
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          const el = document.getElementById(id);
+          el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      });
+    }
+  }
 }

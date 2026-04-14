@@ -115,3 +115,35 @@
   border-color: var(--accent-2);
   transform: translateY(-1px);
 }
+
+@media (max-width: 768px) {
+  .projects {
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .project-card {
+    padding: 24px;
+    border-left: 4px solid var(--accent);
+  }
+  .project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  .project-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .project-card .project-link {
+    width: 100%;
+    text-align: center;
+    background: rgba(91, 155, 255, 0.08);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}

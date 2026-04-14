@@ -38,3 +38,39 @@
 .skill-category span:hover {
   background: #eaeaea;
 }
+
+@media (max-width: 768px) {
+  .skills {
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .skills-intro {
+    font-size: 1rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  .skills-grid {
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+  .skill-category h3 {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+  .skill-category span {
+    font-size: 0.88rem;
+    padding: 8px 16px;
+    margin: 6px;
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border-radius: 12px;
+    color: var(--text); /* Ensure text color is set */
+  }
+  body.dark-mode .skill-category span {
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    color: #ffffff; /* Explicitly bright text */
+  }
+}
