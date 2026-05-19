@@ -12,7 +12,7 @@ export class HeaderComponent {
   resumeUrl: SafeUrl;
 
   constructor(private sanitizer: DomSanitizer, private router: Router) {
-    this.resumeUrl = this.sanitizer.bypassSecurityTrustUrl('/assets/Sunidhi_Resume.docx');
+    this.resumeUrl = this.sanitizer.bypassSecurityTrustUrl('/assets/SUNIDHI_CHATTAR.pdf');
   }
 
   scrollTo(section: string) {
