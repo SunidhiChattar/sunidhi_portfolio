@@ -11,12 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class ProjectsComponent {
   projects = [
-    {
-      id: 'aeroledger',
-      title: 'AeroLedger.io',
-      description: 'Designed and engineered a high-throughput, micro-investment application enabling fractional asset trading with multi-currency support, utilizing an Angular 18 frontend and NestJS backend microservices.',
-      tech: ['Angular', 'Nest.js', 'PostgreSQL']
-    },
+
     {
       id: 'kotak',
       title: 'Kotak CBC Portal',
@@ -30,6 +25,12 @@ export class ProjectsComponent {
       description:
         'Built and optimized NSDL CBC Platform’s web interface, enabling seamless multi-level navigation, enhanced user engagement, and secure, high-performance interactions.',
       tech: ['Angular', 'RxJS', 'REST APIs']
+    },
+    {
+      id: 'aeroledger',
+      title: 'AeroLedger.io',
+      description: 'Designed and engineered a high-throughput, micro-investment application enabling fractional asset trading with multi-currency support, utilizing an Angular 18 frontend and NestJS backend microservices.',
+      tech: ['Angular', 'Nest.js', 'PostgreSQL']
     },
     {
       id: 'bob',
