@@ -14,6 +14,19 @@ export class ProjectDetailsComponent implements OnInit {
 
   projects = [
     {
+      id: 'aeroledger',
+      title: 'AeroLedger.io',
+      description: 'A high-throughput, micro-investment platform built with Angular, NestJS, and Apache Kafka, designed for secure fractional asset trading and real-time ledger auditing.',
+      details: `Architected the entire distributed full-stack system and implemented enterprise-grade security, data streaming, and reactive state management:`,
+      l1: 'Engineered a Kafka-driven microservices backend with strict idempotency guards and transactional outbox patterns to prevent double-debit anomalies.',
+      l2: 'Designed an append-only double-entry ledger in PostgreSQL using pessimistic writing locks to guarantee financial data integrity and concurrent transaction safety.',
+      l3: 'Bridged NgRx state management with Angular Signals using optimized RxJS operator pipelines to process high-frequency market tickers without UI stuttering.',
+      l4: 'Eliminated floating-point rounding errors by implementing arbitrary-precision math (decimal.js) and rendered reactive portfolio wealth growth charts using D3.js.',
+      tech: ['Angular', 'NestJS', 'NgRx', 'Kafka', 'PostgreSQL', 'RxJS', 'D3.js'],
+      liveDemoUrl: 'https://aeroledger-frontend-9lj3.vercel.app/',
+      demoLinkText: '🌐 AeroLedger.io',
+    },
+    {
       id: 'kotak',
       title: 'Kotak Mahindra Bank',
       description: 'A secure, scalable banking application built with Angular and RxJS, delivering high-performance, responsive, and secure user experiences.',

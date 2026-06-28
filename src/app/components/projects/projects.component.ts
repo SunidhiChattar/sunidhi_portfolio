@@ -12,6 +12,12 @@ import { RouterModule } from '@angular/router';
 export class ProjectsComponent {
   projects = [
     {
+      id: 'aeroledger',
+      title: 'AeroLedger.io',
+      description: 'Designed and engineered a high-throughput, micro-investment application enabling fractional asset trading with multi-currency support, utilizing an Angular 18 frontend and NestJS backend microservices.',
+      tech: ['Angular', 'Nest.js', 'PostgreSQL']
+    },
+    {
       id: 'kotak',
       title: 'Kotak CBC Portal',
       description:
@@ -33,7 +39,7 @@ export class ProjectsComponent {
       tech: ['React Native', 'APIs', 'TypeScript']
     },
     {
-       id: 'android',
+      id: 'android',
       title: 'FINO Bank Prepaid Card System',
       description:
         'Developed using Kotlin and Jetpack Compose, implementing biometric authentication, encryption, and modular, lifecycle-aware UI components for secure and efficient user experiences.',
@@ -41,7 +47,7 @@ export class ProjectsComponent {
     },
   ];
   log(id: string) {
-  console.log('Navigating to:', id);
-}
+    console.log('Navigating to:', id);
+  }
 
 }

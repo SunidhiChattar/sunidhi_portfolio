@@ -22,29 +22,28 @@
     <ul class="tech-list">
       <li *ngFor="let tech of project?.tech">{{ tech }}</li>
     </ul>
+
     <!-- 🔽 Demo Video Section -->
-    <div
-      class="demo-video"
-      *ngIf="project?.demoVideoUrl1 || project?.demoVideoUrl2"
-    >
+    <div class="demo-video" *ngIf="project?.demoVideoUrl1 || project?.demoVideoUrl2 || project?.liveDemoUrl">
       <h3>Project Demo</h3>
-      <div class="video-container">
+
+      <!-- 🌐 Live Project Link (New Section) -->
+      <div class="live-demo-action" *ngIf="project?.liveDemoUrl">
+        <a [href]="project.liveDemoUrl" target="_blank" rel="noopener noreferrer" class="demo-btn">
+          {{ project.demoLinkText ?? '🌐 Visit Live Project Website' }}
+        </a>
+      </div>
+
+      <div class="video-container" *ngIf="project?.demoVideoUrl1 || project?.demoVideoUrl2">
         <!-- First video (if present) -->
-        <video
-          *ngIf="project?.demoVideoUrl1"
-          controls
-          [src]="project.demoVideoUrl1"
-          poster="assets/video-thumbnail.jpg"
-        ></video>
+        <video *ngIf="project?.demoVideoUrl1" controls [src]="project.demoVideoUrl1"
+          poster="assets/video-thumbnail.jpg"></video>
 
         <!-- Second video (if present) -->
-        <video
-          *ngIf="project?.demoVideoUrl2"
-          controls
-          [src]="project.demoVideoUrl2"
-          poster="assets/video-thumbnail.jpg"
-        ></video>
+        <video *ngIf="project?.demoVideoUrl2" controls [src]="project.demoVideoUrl2"
+          poster="assets/video-thumbnail.jpg"></video>
       </div>
     </div>
+
   </div>
 </section>
