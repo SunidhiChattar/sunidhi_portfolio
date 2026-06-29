@@ -29,7 +29,7 @@ export class ProjectDetailsComponent implements OnInit {
     {
       id: 'kotak',
       title: 'Kotak Mahindra Bank',
-      description: 'A secure, scalable banking application built with Angular and RxJS, delivering high-performance, responsive, and secure user experiences.',
+      description: 'A secure, scalable banking & finance application(CBC-Corporate Business Correspondent) built with Angular and RxJS, delivering high-performance, responsive, and secure user experiences.',
       details: `Contributed to the frontend architecture and implemented a range of high-impact features to enhance usability, maintainability, and data security:`,
       l1: 'Developed interactive, real-time dashboards using D3.js for transaction tracking, analytics, and insights.',
       l2: 'Implemented HTTP interceptors and encryption mechanisms for secure API communication and data integrity.',
@@ -40,8 +40,8 @@ export class ProjectDetailsComponent implements OnInit {
     },
     {
       id: 'nsdl',
-      title: 'NSDL Bank Platform',
-      description: 'Modernized and optimized the NSDL CBC Platform’s frontend to deliver a secure, high-performance, and accessible web experience.',
+      title: 'NSDL CBC Platform',
+      description: 'Modernized and optimized the NSDL CBC(Corporate Business Correspondent (Banking & Finance)) Platform’s frontend to deliver a secure, high-performance, and accessible web experience.',
       details: 'Contributed to UI re-engineering, accessibility improvements, and secure integrations for a scalable and user-friendly banking web platform:',
       l1: 'Redesigned legacy UI components into reusable Angular modules, enforcing consistent design patterns and maintainability.',
       l2: 'Enhanced accessibility compliance (WCAG) across all major interactive modules to ensure an inclusive user experience.',
